@@ -10,9 +10,9 @@ This project is under active development and support for the new tasks, as well 
 ## Installation and usage
 
 ### Installation
-1. Clone the project.
-2. Initialize project with `uv init` and create a virtual environment with `uv venv -p 3.10`.
-3. Install dependencies with `uv sync --no-dev`. For CPU-only installation type `uv sync --extra cpu`. 
+```
+pip install modelbest
+``` 
 
 ### Usage examples
 
