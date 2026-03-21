@@ -3,7 +3,7 @@ requires = ["hatchling >= 1.26"]
 build-backend = "hatchling.build"
 
 [project]
-name = "pymodeller"
+name = "modelbest"
 version = "0.1.0"
 authors = [
   { name="Maksim Aliev", email="imaxaliev@gmail.com" },
@@ -34,7 +34,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/MaximAliev/pymodeller"
+Homepage = "https://github.com/MaximAliev/modelbest"
 
 [dependency-groups]
 dev = [

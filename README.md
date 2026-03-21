@@ -1,5 +1,5 @@
-# Modeller
-Modeller is a tool, that automates modelling on your (or benchmark) data, acting as a convinient wrapper to the state-of-the-art automated machine learning (AutoML) libraries. 
+# ModelBest
+ModelBest is a tool, that automates modelling on your (or benchmark) data, acting as a convinient wrapper to the state-of-the-art automated machine learning (AutoML) libraries. 
 
 It can be utilized by ML engineers, as well as the common users, to test different modelling scenarios.
 
@@ -17,8 +17,8 @@ This project is under active development and support for the new tasks, as well 
 
 Using a local dataset.
 ```python
-from src.pymodeller.domain import Dataset
-from src.pymodeller.api import Modeller
+from src.modelbest.domain import Dataset
+from src.modelbest.api import Modeller
 import pandas as pd
 
 
@@ -36,8 +36,8 @@ modelseek.run(dataset)
 
 Using a dataset(or collection of such) from a wellknown-source.
 ```python
-from src.pymodeller.api import Modeller
-from src.pymodeller.repository import OpenMLDatasetRepository
+from src.modelbest.api import Modeller
+from src.modelbest.repository import OpenMLDatasetRepository
 
 
 # WARNING: This OpenML benchmark contains big datasets, that may not fit into your RAM.
