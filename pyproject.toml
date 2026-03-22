@@ -21,17 +21,13 @@ license-files = ["LICENSE"]
 # TODO: group dependencies.
 dependencies = [
     "autogluon-tabular[all, skex,realmlp,tabicl,tabpfn,tabdpt]==1.5.0",
-    "imbalanced-learn==0.14.1",
-    "matplotlib>=3.7.5",
-    "numpy>=1.26.0",
-    "openml==0.15.1",
-    "pandas>=2.2.3",
-    "pytest>=8.3.5",
-    "tqdm>=4.66.5",
     "h2o==3.46.0.9",
-    "loguru>=0.7.3",
-    "torch>=2.6,<2.8",
-    "ipython"
+    "imbalanced-learn==0.14.1",
+    "openml==0.15.1",
+    "numpy",
+    "pandas",    
+    "loguru",
+    "ipython",
 ]
 
 [project.urls]
@@ -40,6 +36,8 @@ Homepage = "https://github.com/MaximAliev/modelbest"
 [dependency-groups]
 dev = [
     "install-jdk==1.1.0",
+    "pytest",
     "pyqt5",
+    "matplotlib",
     "twine"
 ]
