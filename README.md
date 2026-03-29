@@ -27,7 +27,7 @@ path_to_local_data = "datasets/local/ecoli.csv"
 dataset = Dataset(name='ecoli', x=pd.read_csv(path_to_local_data))
 
 automl = ModelFind(
-    automl='autogluon',
+    backend='autogluon',
     metric='f1',
     timeout=3600,
     verbosity=2
@@ -44,7 +44,7 @@ from src.modelfind.repository import OpenMLDatasetRepository
 # WARNING: This OpenML benchmark contains big datasets, that may not fit into your RAM.
 datasets = OpenMLDatasetRepository(id=271, verbosity=1).load_datasets(x_and_y=False)
 automl = ModelFind(
-    automl='autogluon',
+    backend='autogluon',
     preset='best',
     metric='f1',
     timeout=3600,
