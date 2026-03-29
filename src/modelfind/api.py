@@ -17,13 +17,13 @@ from sklearn.exceptions import NotFittedError
 from loguru import logger
 from sklearn.base import BaseEstimator
 
-from src.modelbest._automl import H2O, AML, AutoGluon
-from src.modelbest.domain import Dataset, Task
-from src.modelbest.repository import DatasetRepository, ImbalancedDatasetRepository, OpenMLDatasetRepository
-from src.modelbest._helpers import infer_positive_target_class, train_test_split
+from src.modelfind._automl import H2O, AML, AutoGluon
+from src.modelfind.domain import Dataset, Task
+from src.modelfind.repository import DatasetRepository, ImbalancedDatasetRepository, OpenMLDatasetRepository
+from src.modelfind._helpers import infer_positive_target_class, train_test_split
 
 
-class Modeller:
+class ModelFind:
     """
     User interface for performing automated modelling.
 

@@ -18,7 +18,7 @@ from loguru import logger
 import jdk
 import os
 
-from src.modelbest.domain import Dataset, Task
+from src.modelfind.domain import Dataset, Task
 
 
 class AML(ABC):

@@ -1,6 +1,6 @@
-# ModelBest
+# ModelFind
 
-ModelBest is a tool, that automates modelling on your (or benchmark) data, acting as a convinient wrapper to the state-of-the-art automated machine learning (AutoML) libraries. 
+ModelFind is a tool, that automates modelling on your (or benchmark) data, acting as a convinient wrapper to the state-of-the-art automated machine learning (AutoML) libraries. 
 
 It can be utilized by ML engineers, as well as the common users, to test different modelling scenarios.
 
@@ -9,41 +9,41 @@ This project is under active development and support for the new tasks, as well 
 
 ## Installation and usage
 
-### Installation
+<!-- ### Installation
 ```
-pip install modelbest
-``` 
+pip install modelfind
+```  -->
 
 ### Usage examples
 
 Using a local dataset.
 ```python
-from src.modelbest.domain import Dataset
-from src.modelbest.api import Modeller
+from src.modelfind.domain import Dataset
+from src.modelfind.api import ModelFind
 import pandas as pd
 
 
 path_to_local_data = "datasets/local/ecoli.csv"
 dataset = Dataset(name='ecoli', x=pd.read_csv(path_to_local_data))
 
-modelseek = Modeller(
+automl = ModelFind(
     automl='autogluon',
     metric='f1',
     timeout=3600,
     verbosity=2
 )
-modelseek.run(dataset)
+automl.run(dataset)
 ```
 
 Using a dataset(or collection of such) from a wellknown-source.
 ```python
-from src.modelbest.api import Modeller
-from src.modelbest.repository import OpenMLDatasetRepository
+from src.modelfind.api import ModelFind
+from src.modelfind.repository import OpenMLDatasetRepository
 
 
 # WARNING: This OpenML benchmark contains big datasets, that may not fit into your RAM.
 datasets = OpenMLDatasetRepository(id=271, verbosity=1).load_datasets(x_and_y=False)
-modelseek = Modeller(
+automl = ModelFind(
     automl='autogluon',
     preset='best',
     metric='f1',
@@ -52,7 +52,7 @@ modelseek = Modeller(
 )
 
 for dataset in datasets:
-    modelseek.run(dataset)
+    automl.run(dataset)
 ```
 
 ## Contribution
